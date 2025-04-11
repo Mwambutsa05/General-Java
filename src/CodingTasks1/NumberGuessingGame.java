@@ -1,4 +1,4 @@
-package CodingTasks;
+package CodingTasks1;
 
 import java.util.Scanner;
 public class NumberGuessingGame {
