@@ -18,6 +18,12 @@ public class PushNotification implements NotificationService {
 
         NotificationService service2 = new SmsNotification();
         service2.sendNotification("Notification of a message via Sms");
+
+        NotificationService service3 = new TsapNotification();
+        service3.sendNotification("Notification of a message via WhatsApp");
+
+        NotificationService service4 = new SnapNotification();
+        service4.sendNotification("Notification of a message via SnapChat");
     }
 
     @Override
@@ -30,15 +36,34 @@ public class PushNotification implements NotificationService {
         NotificationService.super.setDefaultPriority();
     }
 }
+
+
 class EmailNotification implements NotificationService {
     @Override
     public void sendNotification(String message) {
         System.out.println("Sending Email Notification: " + message);
     }
 }
+
+
 class SmsNotification implements NotificationService {
     @Override
     public void sendNotification(String message) {
         System.out.println(" Sending Sms Notification: " + message);
     }
 }
+
+class TsapNotification implements NotificationService {
+    @Override
+    public void sendNotification(String message) {
+        System.out.println(" Sending Tsap Notification: " + message);
+    }
+}
+
+class SnapNotification implements NotificationService {
+    @Override
+    public void sendNotification(String message) {
+        System.out.println(" sending Snap Notification: " + message);
+    }
+}
+
