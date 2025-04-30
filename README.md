@@ -1,1 +1,1 @@
-# Grade-manager
+# General-Java
